@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <title>Clima</title>
+        <link rel="icon" href="./icons/clima-icono.png">
+    </head>
+    <body>
+        <!--PANTALLA DE CARGA-->
+        <div class="load" id="load">
+            <div class="load-page"></div>
+        </div>
+
+        <!--NAVBAR-->
+        <nav class="nav">
+            <img class="nav-icon" src="animated/weather.svg" alt="">
+        </nav>
+
+        <!--CONTENIDO PRINCIPAL-->
+        <main class="main">
+
+            <!--SLIDER-->
+            <div class="main-slider">
+                <div class="main-slider__show" id="show">
+                </div>
+            </div>
+            <script src="slider.js"></script>
+            
+            <!--MENU DE BUSQUEDA-->
+            <div class="main-currentweather">
+                <!--GRADOS Y CLIMA-->
+                <div class="main-currentweather__degree">
+                    <div class="main-currentweather__degree">
+                        <img class="main-currentweather__degree__img" id="iconWeather" src="" alt="">
+                        <h2 class="main-currentweather__degree__celsius" id="celcius"></h2>
+                    </div>
+                </div>
+                <!--NOMBRE Y PAIS DEL LUGAR-->
+                <div class="main-currentweather__location">
+                    <div class="main-currentweather__location">
+                        <h3 class="main-currentweather__location__city" id="city"></h3>
+                        <p class="main-currentweather__location__country" id="country"></p>
+                    </div>
+                </div>
+                <!--CLIMA Y HUMEDAD-->
+                <div class="main-currentweather__weather">
+                    <div class="main-currentweather__weather">
+                        <p class="main-currentweather__weather__main" id="weather"></p>
+                        <p class="main-currentweather__weather__humidity" id="humidity"></p>
+                    </div>
+                </div>
+                <!--OPCIONES DE CIUDADES-->
+                <div class="main-currentweather__search">
+                    <!--INPUT DE BUSQUEDA DE CIUDAD-->
+                    <div class="main-currentweather__search__jon">
+                        <div class="main-currentweather__search__input">
+                            <img src="icons/search.svg" alt="">
+                            <input type="text" placeholder="buscar ciudad" class="main-currentweather__search__input__city" id="search">
+                        </div>
+                        <button class="main-currentweather__search__botton" id="searchcity">BUSCAR</button>
+                    </div>
+                    <!--MENSAJE DE ERROR AL NO ENCONTRAR LA CIUDAD-->
+                    <p class="main-currentweather__search__errorcity" id="error"></p>
+                    <!--CIUDAD ACTUAL DEL CLIENTE-->
+                    <button class="main-currentweather__search__mycity" id="mycity">Mi ciudad actual</button>
+                </div>
+            </div>
+        </main>
+        <script src="scripts.js"></script>
+    </body>
+</html>
